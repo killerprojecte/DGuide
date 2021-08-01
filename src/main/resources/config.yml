@@ -1,9 +1,19 @@
 setting:
   #第一次进服执行
   joinStart: true
+  commands:
+    - "tell: &6[MC帝国] &7注册成功"
+    - "player: spawn"
 text:
-  bossbar: "&7[&c注意&7] &b请确保密码复杂性,以免出现盗号情况 &7[&c注意&7] "
-  register: |
-    &4&l[&c&l注册&4&l]
-    &4&l■ &b请输入&c&l/Reg <密码> <再次输入密码> &b注册账号 &4&l■
-  actionBar: "&4■ &e示例/reg a123456 a123456"
+  reg:
+    bossbar: "&7[&c注意&7] &b请确保密码复杂性,以免出现盗号情况 &7[&c注意&7] "
+    title: |
+      &4&l[&c&l注册&4&l]
+      &4&l■ &b请输入&c&l/Reg <密码> <再次输入密码> &b注册账号 &4&l■
+    actionBar: "&4■ &e示例/reg a123456 a123456"
+  login:
+    bossbar: "&7[&c注意&7] &b请确保密码复杂性,以免出现盗号情况 &7[&c注意&7] "
+    title: |
+      &4&l[&c&l登录&4&l]
+      &4&l■ &b请输入&c&l/L <密码> &b登录账号 &4&l■
+    actionBar: "&4■ &e忘记密码可联系Q: 3104026189 找回&4■"

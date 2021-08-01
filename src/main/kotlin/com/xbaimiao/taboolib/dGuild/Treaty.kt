@@ -79,10 +79,10 @@ class Commands(val slot: Int, private val list: List<String>) {
                 sender.sendMessage(s.split(": ")[1].colored())
             }
             if (s.lowercase().startsWith("player: ")) {
-                Bukkit.dispatchCommand(sender, "/" + s.split(": ")[1].colored())
+                Bukkit.dispatchCommand(sender, s.split(": ")[1].colored())
             }
             if (s.lowercase().startsWith("console: ")) {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "/" + s.split(": ")[1].colored())
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), s.split(": ")[1].colored())
             }
             if (s.lowercase().startsWith("close")) {
                 sender.closeInventory()

@@ -17,10 +17,12 @@ taboolib {
     }
     install("common")
     install("platform-bukkit")
+    install("module-nms-util")
+    install("module-nms")
     install("module-configuration")
 //    Bungee
 //    install("platform-bungee")
-    version = "6.0.0-pre9"
+    version = "6.0.0-pre18"
 }
 
 repositories {

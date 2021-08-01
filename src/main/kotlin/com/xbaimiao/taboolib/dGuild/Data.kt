@@ -1,5 +1,6 @@
 package com.xbaimiao.taboolib.dGuild
 
+import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import taboolib.module.configuration.Config
 import taboolib.module.configuration.SecuredFile
@@ -12,6 +13,11 @@ object Data {
 
     fun Player.accept() {
         confData.set(this.uniqueId.toString(), true)
+        Bukkit.getScheduler().runTaskAsynchronously(DGuild.plugin, Runnable {
+            synchronized(Data) {
+                confData.saveToFile()
+            }
+        })
     }
 
     fun Player.isAccept(): Boolean {
