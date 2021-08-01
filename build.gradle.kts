@@ -11,10 +11,9 @@ taboolib {
         contributors {
             name("小白").description("TabooLib Developer")
         }
-//        dependencies {
-//            name("ExamplePlugin")
-//            name("ExamplePlugin").optional(true)
-//        }
+        dependencies {
+            name("AuthMe")
+        }
     }
     install("common")
     install("platform-bukkit")
