@@ -17,8 +17,6 @@ taboolib {
     }
     install("common")
     install("platform-bukkit")
-    install("module-nms-util")
-    install("module-nms")
     install("module-configuration")
 //    Bungee
 //    install("platform-bungee")
