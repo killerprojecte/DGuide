@@ -17,7 +17,7 @@ object Event {
         sync(10) {
             if (DGuild.settings.getBoolean("joinStart")) {
                 val player = event.player
-                player.teleport(player.location.add(0.0, -300.0, 0.0))
+                player.teleport(DGuild.conf.getLocation("setting.location")!!)
                 player.noDamageTicks = 3600
                 val authMeApi = AuthMeApi.getInstance()
                 if (!authMeApi.isRegistered(player.name)) {

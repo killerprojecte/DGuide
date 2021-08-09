@@ -16,9 +16,21 @@ object DGuild : Plugin() {
         BukkitPlugin.getInstance()
     }
 
-    init {
+    @Config(value = "config.yml", migrate = true)
+    lateinit var conf: SecuredFile
+        private set
+
+    @Config(value = "gui.yml", migrate = true)
+    lateinit var confGui: SecuredFile
+        private set
+
+    val settings: ConfigurationSection get() = conf.getConfigurationSection("setting")
+
+    val text: ConfigurationSection get() = conf.getConfigurationSection("text")
+
+    override fun onEnable() {
         command(
-            name = "DGuide",
+            name = "dguide",
         ) {
             literal("start", optional = true) {
                 execute<Player> { sender, _, _ ->
@@ -38,22 +50,6 @@ object DGuild : Plugin() {
                 }
             }
         }
-    }
-
-    @Config(value = "config.yml", migrate = true)
-    lateinit var conf: SecuredFile
-        private set
-
-    @Config(value = "gui.yml", migrate = true)
-    lateinit var confGui: SecuredFile
-        private set
-
-    val settings: ConfigurationSection get() = conf.getConfigurationSection("setting")
-
-    val text: ConfigurationSection get() = conf.getConfigurationSection("text")
-
-    override fun onEnable() {
-
     }
 
 }

@@ -1,8 +1,15 @@
 setting:
+  location:
+    world: "world"
+    x: 80
+    y: 80
+    z: 80
+    yaw: 80
+    pitch: 80
   #第一次进服执行
   joinStart: true
+  #登录时执行
   commands:
-    - "tell: &6[MC帝国] &7注册成功"
     - "player: spawn"
 text:
   reg:

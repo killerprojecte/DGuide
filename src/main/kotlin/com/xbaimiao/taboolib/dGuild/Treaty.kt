@@ -3,11 +3,13 @@ package com.xbaimiao.taboolib.dGuild
 import com.xbaimiao.taboolib.dGuild.Data.accept
 import net.md_5.bungee.api.ChatColor
 import org.bukkit.Bukkit
+import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.InventoryHolder
 import org.bukkit.inventory.ItemStack
+import taboolib.module.configuration.SecuredFile
 
 object Treaty {
 
@@ -116,4 +118,14 @@ fun List<String>?.colored(): List<String> {
 
 fun sync(int: Long, func: Runnable) {
     Bukkit.getScheduler().runTaskLater(DGuild.plugin, func, int)
+}
+
+fun SecuredFile.getLocation(path: String): Location? {
+    val world = Bukkit.getWorld(this.getString("$path.world")) ?: return null
+    val x = this.getDouble("$path.x")
+    val y = this.getDouble("$path.y")
+    val z = this.getDouble("$path.z")
+    val yaw = this.getDouble("$path.yaw").toFloat()
+    val pitch = this.getDouble("$path.pitch").toFloat()
+    return Location(world, x, y, z, yaw, pitch)
 }
