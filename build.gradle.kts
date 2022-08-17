@@ -1,6 +1,6 @@
 plugins {
     java
-    id("io.izzel.taboolib") version "1.12"
+    id("io.izzel.taboolib") version "1.42"
     id("org.jetbrains.kotlin.jvm") version "1.5.10"
 }
 
@@ -20,7 +20,7 @@ taboolib {
     install("module-configuration")
 //    Bungee
 //    install("platform-bungee")
-    version = "6.0.0-pre18"
+    version = "6.0.0-63"
 }
 
 repositories {
