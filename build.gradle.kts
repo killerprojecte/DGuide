@@ -20,7 +20,7 @@ taboolib {
     install("module-configuration")
 //    Bungee
 //    install("platform-bungee")
-    version = "6.0.0-63"
+    version = "6.0.9-63"
 }
 
 repositories {
